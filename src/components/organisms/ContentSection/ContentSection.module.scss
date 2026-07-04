@@ -1,0 +1,22 @@
+@use "../../../styles/tokens" as *;
+
+.section {
+  display: grid;
+  gap: $space-8;
+  margin: 0 auto;
+  max-width: 54rem;
+  padding: $space-10 $space-4;
+
+  @include tablet-up {
+    padding: $space-16 $space-8;
+  }
+}
+
+.items {
+  display: grid;
+  gap: $space-6;
+}
+
+.item {
+  min-width: 0;
+}

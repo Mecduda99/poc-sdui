@@ -1,0 +1,13 @@
+@use "../../../styles/tokens" as *;
+
+.figure {
+  display: grid;
+  gap: $space-3;
+  margin: 0;
+}
+
+.caption {
+  color: $color-text-muted;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

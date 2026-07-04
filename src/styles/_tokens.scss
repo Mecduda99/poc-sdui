@@ -1,0 +1,42 @@
+$color-background: #f7f8fb;
+$color-surface: #ffffff;
+$color-surface-muted: #eef3f7;
+$color-text: #18202f;
+$color-text-muted: #5d6b82;
+$color-primary: #0f766e;
+$color-primary-dark: #115e59;
+$color-accent: #d946ef;
+$color-border: #d8e0ea;
+$color-focus: #f59e0b;
+
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-family-display: Arial, Helvetica, sans-serif;
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.25rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+$space-16: 4rem;
+
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;
+
+$breakpoint-tablet: 48rem;
+$breakpoint-desktop: 64rem;
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}

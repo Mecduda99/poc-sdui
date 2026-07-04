@@ -1,0 +1,22 @@
+@use "../../../styles/tokens" as *;
+
+.section {
+  display: grid;
+  gap: $space-6;
+  align-items: center;
+  background: $color-surface;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  padding: $space-10 $space-4;
+
+  @include tablet-up {
+    grid-template-columns: 1fr auto;
+    padding: $space-12 $space-8;
+  }
+}
+
+.copy {
+  display: grid;
+  gap: $space-4;
+  max-width: 48rem;
+}

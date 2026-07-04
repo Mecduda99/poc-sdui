@@ -1,0 +1,47 @@
+@use "../../../styles/tokens" as *;
+
+.section {
+  display: grid;
+  gap: $space-6;
+  margin: 0 auto;
+  max-width: 54rem;
+  padding: $space-10 $space-4 $space-16;
+
+  @include tablet-up {
+    padding: $space-16 $space-8;
+  }
+}
+
+.list {
+  display: grid;
+  gap: $space-4;
+  margin: 0;
+  padding-left: $space-6;
+}
+
+.item {
+  color: $color-text-muted;
+  line-height: 1.6;
+  padding-left: $space-2;
+}
+
+.link {
+  color: $color-primary;
+  font-weight: 800;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary-dark;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    border-radius: $radius-sm;
+    outline: 3px solid $color-focus;
+    outline-offset: 3px;
+  }
+}
+
+.description {
+  margin: $space-1 0 0;
+}

@@ -1,0 +1,47 @@
+@use "../../../styles/tokens" as *;
+
+.section {
+  display: grid;
+  gap: $space-8;
+  padding: $space-10 $space-4;
+
+  @include tablet-up {
+    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
+    align-items: center;
+    padding: $space-16 $space-8;
+  }
+}
+
+.copy {
+  display: grid;
+  gap: $space-5;
+  max-width: 48rem;
+}
+
+.eyebrow {
+  color: $color-primary;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.visual {
+  display: grid;
+  min-height: 12rem;
+  place-items: center;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background:
+    linear-gradient(135deg, rgba($color-primary, 0.12), rgba($color-accent, 0.12)),
+    $color-surface;
+  color: $color-text;
+  font-weight: 800;
+  line-height: 1.4;
+  padding: $space-8;
+  text-align: center;
+
+  @include tablet-up {
+    min-height: 18rem;
+  }
+}

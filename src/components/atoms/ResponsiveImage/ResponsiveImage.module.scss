@@ -1,0 +1,11 @@
+@use "../../../styles/tokens" as *;
+
+.image {
+  display: block;
+  height: auto;
+  width: 100%;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface-muted;
+  padding: $space-6;
+}
