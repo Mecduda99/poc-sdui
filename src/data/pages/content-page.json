@@ -1,0 +1,128 @@
+{
+  "slug": "content-page",
+  "title": "PoC Server-Driven UI",
+  "description": "Uma pagina renderizada a partir de JSON validado com Zod.",
+  "blocks": [
+    {
+      "type": "header",
+      "props": {
+        "logo": {
+          "label": "Logo",
+          "href": "/"
+        },
+        "navigation": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About",
+            "href": "/about"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
+        ]
+      }
+    },
+    {
+      "type": "introduction",
+      "props": {
+        "eyebrow": "Prova de SDUI",
+        "title": "Uma pagina montada por contrato, nao por layout fixo",
+        "summary": "Esse exemplo mostra como um payload JSON pode controlar a composicao de organismos e sub-blocos, mantendo componentes pequenos, testaveis e alinhados a um Design System."
+      }
+    },
+    {
+      "type": "content",
+      "props": {
+        "title": "Seção adaptável, sem quebra de contrato",
+        "items": [
+          {
+            "type": "subtitle",
+            "text": "Contrato flexivel"
+          },
+          {
+            "type": "paragraph",
+            "text": "A area de conteudo aceita uma lista ordenada de itens. O backend pode enviar paragrafos, subtitulos, imagens e boxes de destaque em qualquer sequencia permitida pelo schema."
+          },
+          {
+            "type": "image",
+            "image": {
+              "src": "/imagem-exemplo.jpg",
+              "alt": "Ilustração representando a composição de páginas",
+              "width": 320,
+              "height": 320
+            },
+            "caption": "Um bloco visual pode aparecer entre textos sem alterar o componente de página."
+          },
+          {
+            "type": "highlight",
+            "title": "Escalabilidade",
+            "text": "Novos blocos entram por extensão: schema, componente e mapeamento no renderer. O restante da página continua sem conhecer detalhes de implementação."
+          },
+          {
+            "type": "paragraph",
+            "text": "Essa separação cria uma fronteira clara entre dados, validação e apresentação, reduzindo acoplamento e facilitando evolução incremental."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "props": {
+        "title": "100% do conteudo vem do json",
+        "items": [
+          {
+            "type":"subtitle",
+            "text":"Novas funcionalidades sem quebra de contrato"
+          },
+          {
+            "type":"paragraph",
+            "text": "Essa separação cria uma fronteira clara entre dados, validação e apresentação, reduzindo acoplamento e facilitando evolução incremental."
+          }
+        ]
+      }
+    },
+    {
+      "type": "conclusion",
+      "props": {
+        "title": "Pronto para evoluir",
+        "text": "Essa arquitetura permite que o front-end permaneça enxuto e focado em experiencia, enquanto o backend ganha flexibilidade para adicionar novos blocos, layouts e regras de negocio sem impactar o cliente final de forma disruptiva.",
+        "cta": {
+          "label": "Ver estrutura",
+          "href": "#referencias"
+        }
+      }
+    },
+    {
+      "type": "references",
+      "props": {
+        "title": "Referências",
+        "items": [
+          {
+            "label": "Atomic Design",
+            "href": "https://atomicdesign.bradfrost.com/",
+            "description": "Base conceitual para organizar atoms, molecules e organisms."
+          },
+          {
+            "label": "Zod",
+            "href": "https://zod.dev/",
+            "description": "Validacao runtime do contrato recebido pelo renderer."
+          },
+          {
+            "label": "Next.js",
+            "href": "https://nextjs.org/docs",
+            "description": "Framework usado para rota dinamica e geracao estatica."
+          },
+          {
+            "label": "Mais sobre SDUI",
+            "href": "https://www.alura.com.br/curso-online-ios-utilizando-server-driven-ui-aplicativo",
+            "description": "Curso de Server-Driven UI na Alura."
+          }
+        ]
+      }
+    }
+  ]
+}

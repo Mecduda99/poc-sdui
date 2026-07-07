@@ -5,7 +5,26 @@
   gap: $space-6;
   margin: 0 auto;
   max-width: 54rem;
-  padding: $space-10 $space-4 $space-16;
+  padding: $space-12 $space-4 $space-16;
+  text-align: center;
+
+  h2 {
+    text-align: center;
+    position: relative;
+    padding-bottom: $space-4;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3.5rem;
+      height: 3px;
+      background: $color-primary;
+      border-radius: $radius-sm;
+    }
+  }
 
   @include tablet-up {
     padding: $space-16 $space-8;
@@ -15,20 +34,38 @@
 .list {
   display: grid;
   gap: $space-4;
-  margin: 0;
-  padding-left: $space-6;
+  margin: $space-4 auto 0;
+  padding: 0;
+  list-style: none;
+  max-width: 42rem;
+  width: 100%;
 }
 
 .item {
   color: $color-text-muted;
-  line-height: 1.6;
-  padding-left: $space-2;
+  line-height: 1.65;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-4 $space-5;
+  box-shadow: $shadow-sm;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  text-align: left;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
 }
 
 .link {
   color: $color-primary;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 150ms ease;
 
   &:hover {
     color: $color-primary-dark;
@@ -37,11 +74,13 @@
 
   &:focus-visible {
     border-radius: $radius-sm;
-    outline: 3px solid $color-focus;
-    outline-offset: 3px;
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
   }
 }
 
 .description {
   margin: $space-1 0 0;
+  font-size: 0.95rem;
+  color: $color-text-muted;
 }

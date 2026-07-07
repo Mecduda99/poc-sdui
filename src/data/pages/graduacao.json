@@ -1,5 +1,5 @@
 {
-  "slug": "graduacao",
+  "slug": "content-page",
   "title": "PoC Server-Driven UI",
   "description": "Uma pagina renderizada a partir de JSON validado com Zod.",
   "blocks": [

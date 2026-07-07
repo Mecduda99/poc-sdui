@@ -4,15 +4,8 @@ import { pageSchema, type PageData } from "@/src/schemas/page.schema";
 
 const pagesDirectory = path.join(process.cwd(), "src", "data", "pages");
 
-export function getPageSlugs() {
-  return fs
-    .readdirSync(pagesDirectory)
-    .filter((fileName) => fileName.endsWith(".json"))
-    .map((fileName) => fileName.replace(/\.json$/, ""));
-}
-
-export function getPageBySlug(slug: string): PageData | null {
-  const filePath = path.join(pagesDirectory, `${slug}.json`);
+export function getPageByFilename(filename: string): PageData | null {
+  const filePath = path.join(pagesDirectory, filename);
 
   if (!fs.existsSync(filePath)) {
     return null;
@@ -21,3 +14,5 @@ export function getPageBySlug(slug: string): PageData | null {
   const rawPage = JSON.parse(fs.readFileSync(filePath, "utf-8"));
   return pageSchema.parse(rawPage);
 }
+
+

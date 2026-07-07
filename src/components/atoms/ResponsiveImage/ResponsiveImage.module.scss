@@ -6,6 +6,11 @@
   width: 100%;
   border: 1px solid $color-border;
   border-radius: $radius-md;
-  background: $color-surface-muted;
-  padding: $space-6;
+  background: $color-surface;
+  box-shadow: $shadow-md;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+  }
 }

@@ -5,7 +5,25 @@
   gap: $space-8;
   margin: 0 auto;
   max-width: 54rem;
-  padding: $space-10 $space-4;
+  padding: $space-12 $space-4;
+
+  h2 {
+    text-align: center;
+    position: relative;
+    padding-bottom: $space-4;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3.5rem;
+      height: 3px;
+      background: $color-primary;
+      border-radius: $radius-sm;
+    }
+  }
 
   @include tablet-up {
     padding: $space-16 $space-8;
@@ -15,6 +33,7 @@
 .items {
   display: grid;
   gap: $space-6;
+  text-align: left;
 }
 
 .item {

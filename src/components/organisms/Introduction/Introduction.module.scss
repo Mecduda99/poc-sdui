@@ -1,13 +1,16 @@
 @use "../../../styles/tokens" as *;
 
 .section {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: $space-8;
-  padding: $space-10 $space-4;
+  padding: $space-12 $space-4;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
 
   @include tablet-up {
-    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
-    align-items: center;
     padding: $space-16 $space-8;
   }
 }
@@ -16,32 +19,47 @@
   display: grid;
   gap: $space-5;
   max-width: 48rem;
+  text-align: center;
+  justify-items: center;
 }
 
 .eyebrow {
   color: $color-primary;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  background: rgba($color-primary, 0.08);
+  padding: $space-1 $space-3;
+  border-radius: $radius-sm;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .visual {
   display: grid;
   min-height: 12rem;
+  width: 100%;
+  max-width: 32rem;
   place-items: center;
-  border: 1px solid $color-border;
+  border: 1px solid rgba($color-primary, 0.15);
+  border-top: 3px solid $color-primary;
   border-radius: $radius-md;
-  background:
-    linear-gradient(135deg, rgba($color-primary, 0.12), rgba($color-accent, 0.12)),
-    $color-surface;
-  color: $color-text;
+  background: $color-surface-dark;
+  color: #ffffff;
   font-weight: 800;
   line-height: 1.4;
   padding: $space-8;
   text-align: center;
+  box-shadow: $shadow-md;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
 
   @include tablet-up {
-    min-height: 18rem;
+    min-height: 14rem;
   }
 }

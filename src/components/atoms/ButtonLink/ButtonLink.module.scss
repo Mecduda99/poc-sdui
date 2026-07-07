@@ -11,19 +11,27 @@
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1;
-  padding: $space-3 $space-5;
+  padding: $space-3 $space-6;
   text-decoration: none;
+  box-shadow: $shadow-sm;
   transition:
-    background 160ms ease,
-    transform 160ms ease;
+    background-color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
 
   &:hover {
-    background: $color-primary-dark;
+    background-color: $color-primary-dark;
     transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
   }
 
   &:focus-visible {
-    outline: 3px solid $color-focus;
-    outline-offset: 3px;
+    outline: 2px solid $color-focus;
+    outline-offset: 2px;
   }
 }

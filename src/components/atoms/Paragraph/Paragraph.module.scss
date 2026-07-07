@@ -1,9 +1,9 @@
 @use "../../../styles/tokens" as *;
 
 .paragraph {
-  color: $color-text-muted;
+  color: $color-text;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0;
 
   @include tablet-up {
