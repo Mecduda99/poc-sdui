@@ -1,3 +1,6 @@
+# PoC 
+Este projeto tem o intuito de aplicar uma nova arquitetura no front end para testar formas diferentes de renderizar a UI diretamente pelo backend. Trazendo uma maior eficiência no deploy e resolução de bugs.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
