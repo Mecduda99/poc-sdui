@@ -1,5 +1,12 @@
-# PoC 
-Este projeto tem o intuito de aplicar uma nova arquitetura no front end para testar formas diferentes de renderizar a UI diretamente pelo backend. Trazendo uma maior eficiência no deploy e resolução de bugs.
+# PoC - Server-Driven UI
+
+Prova de Conceito desenvolvida para validar o uso da arquitetura **Server-Driven UI (SDUI)**. O objetivo é permitir que o back-end defina e controle a interface do usuário em tempo de execução, utilizando contratos baseados em **JSON Schema**.
+
+**Principais vantagens exploradas:**
+- **Renderização Dinâmica:** Layouts controlados via JSON.
+- **Deploy Independente:** Alterações de UI e correções de bugs direto pelo servidor, eliminando a necessidade de re-deploy do front-end.
+- **Padronização:** Garantia de integridade da interface através de contratos estruturados.
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
